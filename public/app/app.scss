@@ -1,15 +1,34 @@
+$textColor: #9F4F56;
+$white:lighten(#E3C1CC,5%);
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#31c8b9+0,30a3b6+39,30a3b6+39,207cca+75,125b7b+100 */
+body{
+	height:100vh;
+	color:$white;
+	font-size:2em;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ea757e+1,491f69+100 */
+background: #ea757e; /* Old browsers */
+background: -moz-linear-gradient(top,  #ea757e 1%, #491f69 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ea757e), color-stop(100%,#491f69)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ea757e 1%,#491f69 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ea757e 1%,#491f69 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ea757e 1%,#491f69 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ea757e 1%,#491f69 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea757e', endColorstr='#491f69',GradientType=0 ); /* IE6-9 */
 
+
+
+}
 // Add your fractal Sass files below!
 @import 'navbar/navbar';
 @import 'home/home';
