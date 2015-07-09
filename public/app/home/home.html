@@ -1,62 +1,13 @@
 <section id="home">
-<div class="row text-center">
-	<div class="col-md-12">
-	<h1>Ishmael</h1>
-	<p>I'm just a simple MEAN stack wireframe for a quick start at making something.</p>
-		
+	<div class="row text-center">
+		<div class="col-md-12">
+			<h1>Ishmael</h1>
+			<p>"And I, only, am escaped alone to tell thee."</p>
+		</div>
+		<div id="demo">
+			<div class="container">
+				<rating id='rating-slider' max='8' ng-model='rating.selected'></rating>
+			</div>
+		</div>
 	</div>
-	<div id="demo">
-		
-	</div>
-</div>
 </section>
-<script>
-var fill = d3.scale.category20();
-var layout = d3.layout.cloud()
-	.size([500, 500])
-	.words([
-		"Hello", "world", "normally", "you", "want", "more", "words",
-		"than", "this"
-	].map(function(d) {
-		return {
-			text: d,
-			size: 10 + Math.random() * 90,
-			test: "haha"
-		};
-	}))
-	.padding(5)
-	.rotate(function() {
-		return ~~(Math.random() * 2) * 90;
-	})
-	.font("Helvetica Neue")
-	.fontSize(function(d) {
-		return d.size;
-	})
-	.on("end", draw);
-layout.start();
-
-function draw(words) {
-	d3.select("#demo").append("svg")
-		.attr("width", layout.size()[0])
-		.attr("height", layout.size()[1])
-		.append("g")
-		.attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
-		.selectAll("text")
-		.data(words)
-		.enter().append("text")
-		.style("font-size", function(d) {
-			return d.size + "px";
-		})
-		.style("font-family", "Helvetica Neue")
-		.style("fill", function(d, i) {
-			return fill(i);
-		})
-		.attr("text-anchor", "middle")
-		.attr("transform", function(d) {
-			return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-		})
-		.text(function(d) {
-			return d.text;
-		});
-}
-</script>

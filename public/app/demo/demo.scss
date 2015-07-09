@@ -1,0 +1,16 @@
+#rating-slider {
+  font-size: 1.5em;
+  &:focus {
+    outline: none;
+  }
+}
+.container {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#demo {
+  margin: 12% 0;
+}
