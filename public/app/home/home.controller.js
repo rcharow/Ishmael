@@ -3,7 +3,7 @@ app.controller('HomeController', function($scope, $http) {
 		$scope.filteredData;
 		$scope.currentWords;
 		$scope.rating = {};
-		
+		$scope.done = false;
 		$scope.$watch('rating.selected', function (newValue, oldValue) {
 			if (!newValue || !$scope.filteredData) return;
 			if (newValue === 1) {
@@ -13,16 +13,20 @@ app.controller('HomeController', function($scope, $http) {
 			}
 		})
 
-		$http.get('/api/reviews')
+		$scope.getReviews = function () {
+			$http.get('/api/reviews')
 			.then(function(response) {
 				return JSON.parse(response.data);
 			})
 			.then(function (data) {
 				$scope.filteredData = translateData(data);
+				$scope.done = true;
+				console.log('Data has arrived!');
 			})
 			.catch(function (err) {
 				console.error(err);
 			})
+		}
 
 	function translateData(data) {
 		var filteredData = {};
