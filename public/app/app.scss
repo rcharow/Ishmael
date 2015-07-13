@@ -26,7 +26,8 @@ body {
 #home h1 {
   color: white;
   font-family: 'Exo', sans-serif;
-  font-size: 3em; }
+  font-size: 3em;
+  font-variant: small-caps; }
 
 #home blockquote {
   font-size: 14px;
@@ -35,10 +36,14 @@ body {
 .greenbutton {
   background-color: green; }
 
-.btn {
+div {
+  .btn {
   position: absolute;
   bottom: 20px;
-  right: 45%; }
+  right: 46%;
+  background-color: none;
+   }
+ }
 
 #modules ul {
   list-style: none;

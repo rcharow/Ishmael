@@ -14,7 +14,7 @@ app.controller('HomeController', function($scope, $http) {
 		})
 
 		$scope.getReviews = function () {
-			$http.get('/api/reviews')
+			$http.get('/api/reviews', $scope.API)
 			.then(function(response) {
 				return JSON.parse(response.data);
 			})
