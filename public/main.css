@@ -8,7 +8,46 @@ body {
   font-size: 2em;
   background: #22313F;
   color: white !important;
-  font-family: 'Proxima Nova', 'Helvetica Neue', 'Open Sans', sans-serif;
+  font-family: 'Proxima Nova', 'Helvetica Neue', 'Open Sans', sans-serif; }
+
+.navbar {
+  border-radius: 0; }
+
+#home h1 {
+  color: #9F4F56;
+  font-family: 'Exo', sans-serif;
+  font-size: 3em; }
+
+#home blockquote {
+  font-size: 14px;
+  font-style: italic; }
+
+.greenbutton {
+  background-color: green; }
+
+.btn {
+  position: absolute;
+  bottom: 20px;
+  right: 45%; }
+
+#modules ul {
+  list-style: none;
+  padding-left: 0; }
+
+#rating-slider {
+  font-size: 1.5em; }
+
+#rating-slider:focus {
+  outline: none; }
+
+.container {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+#demo {
+  margin: 12% 0; }
 
 .navbar {
   border-radius: 0; }
